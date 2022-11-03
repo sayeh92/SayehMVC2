@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h3>Logo</h3>
+        <nav>
+            <ul class="listNav">
+            
+                 <li class="about">
+                     <a asp-action="Index" asp-controller="Home">About</a>
+                 </li>
+                 <li class="contactMe">
+                     <a asp-action="Contact" asp-controller="Home">Contact</a>
+                 </li>
+                 <li class="projects">
+                    <a asp-action="Project" asp-controller="Home">Project</a>
+                 </li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer> &#169; Sayeh 2022</footer>
+</body>
+</html>
