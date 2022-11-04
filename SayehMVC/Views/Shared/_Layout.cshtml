@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-        <h3>Logo</h3>
+
+        <img src="https://github.com/sayeh92/SayehMVC2/blob/master/sayeh-low-resolution-logo-white-on-transparent-background_24.png?raw=true" />
+        
+        
         <nav>
             <ul class="listNav">
             
@@ -21,6 +24,12 @@
                  <li class="projects">
                     <a asp-action="Project" asp-controller="Home">Project</a>
                  </li>
+                <li class="projects">
+                    <a asp-action="Project" asp-controller="Home">Project</a>
+                </li>
+                <li class="projects">
+                    <a asp-action="Project" asp-controller="Home">Project</a>
+                </li>
                 
             </ul>
         </nav>
@@ -28,6 +37,11 @@
     <div>
         @RenderBody()
     </div>
-    <footer> &#169; Sayeh 2022</footer>
+    <footer>
+       
+        <div>@DateTime.Now.ToString("MM-dd-yyyy hh:mm tt") </div>
+              
+        &#169; Sayeh 2022
+    </footer>
 </body>
 </html>
