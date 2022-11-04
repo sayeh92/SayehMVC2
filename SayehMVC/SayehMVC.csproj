@@ -26,6 +26,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\FeverController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Docter.cshtml" />
+    <Content Remove="Views\Fever.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
   </ItemGroup>
 

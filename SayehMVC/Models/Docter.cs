@@ -2,9 +2,10 @@
 {
     public class Docter
     {
-        public static string Diagnsis (Double temp)
+        public static string FeverCheck (Double temp)
         {
-            return "";
+            return (temp > 37) ? "Doctor Vader says you have fever...have a cookie" : "Doctor Vader says you don't have any fever...so no cookie";
         }
     }
 }
+
