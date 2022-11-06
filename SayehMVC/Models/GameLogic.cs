@@ -5,18 +5,18 @@ namespace SayehMVC.Models
 {
     public class GameLogic : GameController
     {
-        public static string GuessTheNumber(int num, int MyNumberNum)
+        public static string GuessTheNumber(int GuessByUser, int StoredNum)
         {
-          
-            if (num > MyNumberNum)
+
+            if (GuessByUser > StoredNum)
             {
                 return "Your Number is too high";
             }
-            if (num < MyNumberNum)
+            if (GuessByUser < StoredNum)
             {
                 return "Your Number is too low";
             }
-            else /*(num == MyNumberNum)*/
+            else 
             {
                 return "Yout got it";
             }
@@ -30,5 +30,9 @@ namespace SayehMVC.Models
             return MyNumberNum;
         }
 
+        internal static string GuessTheNumber(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,25 +1,46 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace SayehMVC.Controllers
 {
     public class GameController : Controller
     {
 
-     
-        public IActionResult GuessView(int num, int MyNumberNum)
-        {
 
-          
-            if (num != MyNumberNum)
+        [HttpGet]
+
+        public IActionResult GuessView()
+        {
+            if ((string.IsNullOrEmpty(HttpContext.Session.GetString("intRnd"))))
             {
-                ViewBag.Msg = Models.GameLogic.GuessTheNumber(num, MyNumberNum);
-                return View();
+                int getRnd=
+
             }
             else
             {
-                ViewBag.Msg = "Please Enter your Number";
-                return View();
+                ViewBag.Rnd = HttpContext.Session.GetInt32("intRnd");
             }
+            return View();
+
+        }
+
+
+        [HttpPost]
+        public IActionResult GuessView(int GuessByUser)
+        {
+            if (!(string.IsNullOrEmpty(HttpContext.Session.GetString("intRnd"))))
+            {
+                string? StoredRnd = HttpContext.Session.GetString("intRnd");
+                string response = Models.GameLogic.GuessTheNumber(Convert.ToInt32( GuessByUser));
+                ViewBag.Msg = response;
+               
+            } 
+            else
+            {
+                ViewBag.Msg = "Guess your number";
+            }
+            return View();
+         
         }
     }
 }
