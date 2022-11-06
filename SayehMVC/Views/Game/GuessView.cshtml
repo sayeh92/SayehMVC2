@@ -12,11 +12,17 @@
                    placeholder="Guess" min="0" max="100" step="1" />
             <button type="submit">Submit</button>
         </form>
-        <form asp-action="GuessView" asp-controller="Game" method="get">
+       <form asp-action="GuessView" asp-controller="Game" method="get">
              <button type="submit">Reset</button>
-        </form>
+      </form>
 
-        <p>@ViewBag.Msg</p>
+        <p>
+
+            @if (ViewBag.number != null)
+            {
+                @ViewBag.number
+            }
+         </p>
 
     </div>
 
