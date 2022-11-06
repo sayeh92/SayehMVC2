@@ -48,7 +48,7 @@ img {
     place-self: center;
     list-style: none;
     font-size: 1.3rem;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 li {
@@ -67,6 +67,7 @@ body {
     background: #44BBA4;
     margin: 0 auto;
     color: white;
+   
 }
 
 footer {

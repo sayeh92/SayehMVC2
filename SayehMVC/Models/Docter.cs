@@ -4,7 +4,7 @@
     {
         public static string FeverCheck (Double temp)
         {
-            return (temp > 37) ? "Doctor Vader says you have fever...have a cookie" : "Doctor Vader says you don't have any fever...so no cookie";
+            return (temp > 37) ? "Fever Alert, Do something" : "No fever, You are fine";
         }
     }
 }

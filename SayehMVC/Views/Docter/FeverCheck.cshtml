@@ -4,13 +4,13 @@
 }
 
 <div class="container">
-    <h2>Doctor Vader Checking out your temp</h2>
+    <h2>Lets check your temprature</h2>
     <div class="wrapper">
         <h3>Fever check</h3>
         <form asp-action="FeverCheck"asp-controller="Docter" method="get">
 
             <input type="number" name="temp" value="" 
-                placeholder="Enter your body temperature" min="0" max="100" step="1" />
+                placeholder="Temp" min="37" max="100" step="1" />
                 <button type="submit">Submit</button>
 
                 <p>

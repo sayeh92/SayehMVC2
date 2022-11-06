@@ -47,12 +47,12 @@ namespace SayehMVC
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints act like a if/else chain, first one that is true is the one to be used!
-                endpoints.MapControllerRoute(
-                    name: "PrefLangCustomRoute",
-                    pattern: "PreferdLanguage",
-                    defaults: new { controller = "Demo", action = "PreferdLanguageCookie" }
-                    );
+               // endpoints act like a if/else chain, first one that is true is the one to be used!
+                //endpoints.MapControllerRoute(
+                //    name: "PrefLangCustomRoute",
+                //    pattern: "PreferdLanguage",
+                //    defaults: new { controller = "Demo", action = "PreferdLanguageCookie" }
+                //    );
 
                 endpoints.MapControllerRoute(
                     name: "default",

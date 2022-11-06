@@ -15,9 +15,11 @@ namespace SayehMVC.Controllers
             }
             else
             {
-                ViewBag.Msg = "Please enter your temperature and then hit Submit";
+                ViewBag.Msg = "Please Enter your temperature and then hit Submit";
                 return View();
             }
+
+
 
         }
 
