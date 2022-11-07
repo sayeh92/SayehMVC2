@@ -8,7 +8,7 @@
         <h3>Guess me </h3>
         <form asp-action="GuessView" asp-controller="Game" method="post">
 
-            <input type="number" name="temp" value=""
+            <input type="number" name="guess" value=""
                    placeholder="Guess" min="0" max="100" step="1" />
             <button type="submit">Submit</button>
         </form>
@@ -18,9 +18,9 @@
 
         <p>
 
-            @if (ViewBag.number != null)
+            @if (ViewBag.Number != null)
             {
-                @ViewBag.number
+                @ViewBag.Number
             }
          </p>
 

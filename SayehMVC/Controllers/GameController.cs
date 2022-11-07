@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System;
 
 namespace SayehMVC.Controllers
@@ -27,10 +28,10 @@ namespace SayehMVC.Controllers
             string? RandomNumCookie = Request.Cookies["randomNumber"];
             if ( RandomNumCookie != null)
             {
-                CookieOptions mycookie = new CookieOptions();
-                mycookie.Expires = DateTime.Now.AddMinutes(-1);
+                CookieOptions MyCookie = new CookieOptions();
+                MyCookie.Expires = DateTime.Now.AddMinutes(0);
                 randomNumber.Next(0, 100);
-                Response.Cookies.Append("randomNumber", "", mycookie);
+                Response.Cookies.Append("randomNumber", "", MyCookie);
             }
             return View();
 
@@ -60,22 +61,20 @@ namespace SayehMVC.Controllers
             if (RandomNumCookie == null)
             {
                 //seting up the  cookie with CookieOptions
-                CookieOptions mycookie = new CookieOptions();
+                CookieOptions MyCookie = new CookieOptions();
                 //expiration time
-                mycookie.Expires = DateTime.Now.AddMinutes(3);
+                MyCookie.Expires = DateTime.Now.AddMinutes(10);
                 //min and max for random number
                 int num = randomNumber.Next(0,100);
                 //adding a new cookie
-                Response.Cookies.Append("randomNumber", num.ToString(),mycookie);
+                Response.Cookies.Append("randomNumber", num.ToString(), MyCookie);
                 //assigning num to Rnd
                 Rnd = num;
             }
             else 
             {
                 //Conversion the cookie from string to int
-                
-               Rnd = int.Parse(RandomNumCookie);
-                
+                Rnd = int.Parse(RandomNumCookie);
             }
             
             ViewBag.Number = Models.GameLogic.GuessTheNumber(GuessByUser, Rnd);

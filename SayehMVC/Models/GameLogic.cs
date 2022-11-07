@@ -8,28 +8,23 @@ namespace SayehMVC.Models
         public static string GuessTheNumber(int GuessByUser, int Rnd)
         {
 
-           while( GuessByUser == Rnd)
-            {
 
-             
-                if (GuessByUser > Rnd)
+
+            if (GuessByUser > Rnd)
                 {
-                    return "Your Number is too high";
+                    return "Your Number "+ GuessByUser +"  is too high";
                 }
-                if (GuessByUser < Rnd)
+                else if (GuessByUser < Rnd)
                 {
-                    return "Your Number is too low";
+                    return "Your Number "+ GuessByUser + " is too low";
                 }
                 else
                 {
-                    return "Yout got it";
+                    return "You got it";
                 }
 
-                
+        
 
-            }
-
-            return "...";
 
         }
 
