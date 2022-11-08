@@ -5,18 +5,18 @@ namespace SayehMVC.Models
 {
     public class GameLogic : GameController
     {
-        public static string GuessTheNumber(int GuessByUser, int MyRandomNum)
+        public static string GuessTheNumber(int Guess, int MyRandomNum)
         {
 
            
 
-            if (GuessByUser > MyRandomNum)
+            if (Guess > MyRandomNum)
                 {
-                    return "Your Number "+ GuessByUser +"  is too high";
+                    return "Your Number "+ Guess + "  is too high";
                 }
-                else if (GuessByUser < MyRandomNum)
+                else if (Guess < MyRandomNum)
                 {
-                    return "Your Number "+ GuessByUser + " is too low";
+                    return "Your Number "+ Guess + " is too low";
                 }
                 else
                 {

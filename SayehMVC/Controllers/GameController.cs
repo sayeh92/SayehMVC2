@@ -9,12 +9,12 @@ namespace SayehMVC.Controllers
     {
 
         [HttpPost]
-        public IActionResult GuessView(int GuessByUser)
+        public IActionResult GuessView(int Guess)
         {
             if (!(string.IsNullOrEmpty(HttpContext.Session.GetString("intRnd"))))
             {
                 int storedRnd = (int)HttpContext.Session.GetInt32("intRnd");
-                string response = GameLogic.GuessTheNumber(Convert.ToInt32(GuessByUser), storedRnd);
+                string response = GameLogic.GuessTheNumber(Convert.ToInt32(Guess), storedRnd);
 
                 ViewBag.Msg = response;
 
