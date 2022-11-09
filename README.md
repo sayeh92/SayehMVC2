@@ -1,6 +1,6 @@
-# assignment MVC
+# The Assignment of MVC
 
-For thisassignment, you are to create an MVC Web Application from scratch.
+For this assignment, you are to create an MVC Web Application from scratch.
 Use the ASP.NET Core Web Application solution/project type, and the “Empty” template to start
 with.
 This will give you the basic structure to build your project from.
